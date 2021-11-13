@@ -1,4 +1,5 @@
 const mongoose = require ("mongoose");
+require("dotenv").config();
 //Ahora importamos app
 const app = require("./App");
 //Importamos el puerto
@@ -8,7 +9,7 @@ const { API_VERSION, IP_SERVER, PORT_DB } = require ("./config");
 
 /* mongoose.set("useFindAndMoify", false); */
 
-mongoose.connect(`mongodb+srv://${IP_SERVER}:${PORT_DB}`,
+mongoose.connect(`${process.env.DATABASE_URL}`,
 {useNewUrlParser: true, useUnifiedTopology: true}, (err, res) => {
     if (err){
         throw err;
