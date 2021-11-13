@@ -1,7 +1,7 @@
 const mongoose = require ("mongoose");
 require("dotenv").config();
 //Ahora importamos app
-const app = require("./App");
+const app = require("./app");
 //Importamos el puerto
 const port = process.env.PORT || 3977;
 //Hacemos lo mismo para nuestra versión dela API
